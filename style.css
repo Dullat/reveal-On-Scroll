@@ -9,12 +9,18 @@ body {
   font-family: poppins;
 }
 
-.sec-01{
+svg {
+  fill: #fff;
+  width: 40px;
+}
+
+.sec-01 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .container {
@@ -23,54 +29,92 @@ body {
   justify-content: center;
 }
 
-h2 {
+h1 {
   text-align: center;
+  margin-bottom: 5rem;
 }
 
-.image{
+.image {
   background: url(./img.jpg);
   height: 400px;
   flex-basis: 400px;
   flex-grow: 1;
   max-width: 500px;
   background-size: cover;
-  border-radius: 1rem
+  border-radius: 1rem;
 }
 
 .content {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  align-items: center;
 }
 
-.text-box{
+.text-box {
   position: relative;
   width: 300px;
   padding: 1rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
-  transform: translate(-50px, 50px)
+  transform: translate(-50px, 50px);
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+.social2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 400px;
+}
+
+.social2 svg:nth-child(odd) {
+  transform: translateX(8rem);
+}
+
+.social2 svg:nth-child(even) {
+  transform: translateX(3.5rem);
+}
+
+.social2 svg:nth-child(3) {
+  transform: translateX(0rem);
 }
 
 @media screen and (max-width: 600px) {
-  .sec-01{
+  .sec-01 {
     overflow: hidden;
   }
-  
-  .content{
+
+  .content {
     flex-direction: column;
     gap: 2rem;
   }
-  
-  .text-box{
+
+  .text-box {
     transform: translate(0px, 0px);
     width: fit-content;
     margin: 0px;
   }
-  
-  .sec-01{
+
+  .sec-01 {
     min-height: 100vh;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .social2 {
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
   }
 }
